@@ -1,0 +1,67 @@
+{
+  // Theme
+  // "workbench.colorTheme": "Dracula",
+
+  // config related to code formatting
+
+  "editor.tokenColorCustomizations": {
+    "[Default Dark+]": {
+      "functions": "#1ED760",
+      "keywords": "#f92672",
+      "strings": "#FFD866",
+      "comments": "#5f5f5f",
+      "numbers": "#c74ded",
+      //"variables": "#0af7d3",
+      //"variables": "#ff79cd",
+      "variables": "#ff79c6",
+
+      "textMateRules": [
+        {
+          "scope": "variable.other.constant",
+          "settings": {
+            "foreground": "#c74ded"
+          }
+        },
+        {
+          "scope": [
+            "keyword.operator",
+            "keyword.control",
+            "keyword.operator.new"
+          ],
+          "settings": {
+            "foreground": "#f92672"
+          }
+        },
+
+        {
+          "scope": "entity.name.tag",
+          "settings": {
+            "foreground": "#1c99e6"
+            //"foreground": "#1c99e6b4"
+          }
+        },
+        {
+          "scope": "variable.parameter",
+          "settings": {
+            //"foreground": "#CE9178"
+            "foreground": "#FC9867"
+            //"foreground": "#ffb86c"
+          }
+        },
+        {
+          "scope": "entity.other.attribute-name",
+          "settings": {
+            //"foreground": "#e74c3c",
+            //"foreground": "#00e8c6"
+            "foreground": "#96E072"
+          }
+        }
+      ]
+    }
+  },
+
+  "files.associations": {
+    "*.js": "javascript",
+    "*.jsx": "javascriptreact"
+  }
+}
