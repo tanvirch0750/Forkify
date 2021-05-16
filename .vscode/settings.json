@@ -7,13 +7,14 @@
   "editor.tokenColorCustomizations": {
     "[Default Dark+]": {
       "functions": "#1ED760",
+      //"keywords": "#f92672",
       "keywords": "#f92672",
       "strings": "#FFD866",
       "comments": "#5f5f5f",
       "numbers": "#c74ded",
-      //"variables": "#0af7d3",
+      "variables": "#0af7d3",
       //"variables": "#ff79cd",
-      "variables": "#ff79c6",
+      //"variables": "#ff79c6",
 
       "textMateRules": [
         {
