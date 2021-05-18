@@ -1,0 +1,26 @@
+var _model = require('./model');
+var _viewsRecipeView = require('./views/recipeView');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _viewsRecipeViewDefault = _parcelHelpers.interopDefault(_viewsRecipeView);
+require('core-js/stable');
+require('regenerator-runtime/runtime');
+// https://forkify-api.herokuapp.com/v2
+// /////////////////////////////////////
+const controlRecipes = async () => {
+  try {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    _viewsRecipeViewDefault.default.renderSpinner();
+    // 1) Loading Recipe
+    await _model.loadRecipe(id);
+    // 2) Rendering Recipe
+    _viewsRecipeViewDefault.default.render(_model.state.recipes);
+  } catch (error) {
+    _viewsRecipeViewDefault.default.renderError();
+  }
+};
+// for publisher-subscriber pattern
+const init = function () {
+  _viewsRecipeViewDefault.default.addHandlerRender(controlRecipes);
+};
+init();

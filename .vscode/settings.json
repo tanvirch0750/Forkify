@@ -58,6 +58,25 @@
           }
         }
       ]
+    },
+
+    "[Monokai Pro]": {
+      "textMateRules": [
+        {
+          "scope": "variable.other.constant",
+          "settings": {
+            "foreground": "#bc6ff1"
+          }
+        },
+        {
+          "scope": "variable.parameter",
+          "settings": {
+            //"foreground": "#CE9178"
+            "foreground": "#FC9867"
+            //"foreground": "#ffb86c"
+          }
+        }
+      ]
     }
   },
 
