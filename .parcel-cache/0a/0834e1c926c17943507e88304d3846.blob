@@ -1,0 +1,47 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "state", function () {
+  return state;
+});
+_parcelHelpers.export(exports, "loadRecipe", function () {
+  return loadRecipe;
+});
+_parcelHelpers.export(exports, "loadSearchResults", function () {
+  return loadSearchResults;
+});
+var _config = require('./config');
+var _helper = require('./helper');
+const state = {
+  recipes: {}
+};
+const loadRecipe = async function (id) {
+  try {
+    const data = await _helper.getJSON(`${_config.API_URL}${id}`);
+    const {recipe} = data.data;
+    state.recipes = {
+      id: recipe.id,
+      title: recipe.title,
+      publisher: recipe.publisher,
+      sourceUrl: recipe.source_url,
+      image: recipe.image_url,
+      servings: recipe.servings,
+      cookingTime: recipe.cooking_time,
+      ingredients: recipe.ingredients
+    };
+    console.log(state.recipes);
+  } catch (error) {
+    // temp error handling
+    console.log(`${error}`);
+    throw error;
+  }
+};
+const loadSearchResults = async function (query) {
+  try {
+    const data = await _helper.getJSON(`${_config.API_URL}?search=${query}`);
+    console.log(data);
+  } catch (error) {
+    console.log(`${error}`);
+    throw error;
+  }
+};
+loadSearchResults('pizza');

@@ -24,11 +24,7 @@
           }
         },
         {
-          "scope": [
-            "keyword.operator",
-            "keyword.control",
-            "keyword.operator.new"
-          ],
+          "scope": ["keyword.operator", "keyword.control"],
           "settings": {
             "foreground": "#f92672"
           }
@@ -55,25 +51,6 @@
             //"foreground": "#e74c3c",
             //"foreground": "#00e8c6"
             "foreground": "#96E072"
-          }
-        }
-      ]
-    },
-
-    "[Monokai Pro]": {
-      "textMateRules": [
-        {
-          "scope": "variable.other.constant",
-          "settings": {
-            "foreground": "#bc6ff1"
-          }
-        },
-        {
-          "scope": "variable.parameter",
-          "settings": {
-            //"foreground": "#CE9178"
-            "foreground": "#FC9867"
-            //"foreground": "#ffb86c"
           }
         }
       ]

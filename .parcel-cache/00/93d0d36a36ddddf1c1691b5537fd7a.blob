@@ -1,0 +1,13 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _View = require('./View');
+var _ViewDefault = _parcelHelpers.interopDefault(_View);
+class ResultsView extends _ViewDefault.default {
+  _parentElement = document.querySelector('.results');
+  _generateMarkup() {
+    return `
+         
+     `;
+  }
+}
+exports.default = new ResultsView();

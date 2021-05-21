@@ -4,12 +4,16 @@ import { getJSON } from './helper';
 // Application state (STATE)
 export const state = {
   recipes: {},
+  search: {
+    query: '',
+    results: [],
+  },
 };
 
 // Bring recipe data by ajax call (HTTP LIBRARY)
 export const loadRecipe = async function (id) {
   try {
-    const data = await getJSON(`${API_URL}/${id}`);
+    const data = await getJSON(`${API_URL}${id}`);
 
     const { recipe } = data.data;
 
@@ -31,3 +35,25 @@ export const loadRecipe = async function (id) {
     throw error;
   }
 };
+
+// Bring search data by ajax call (HTTP LIBRARY)
+export const loadSearchResults = async function (query) {
+  try {
+    state.search.query = query;
+    const data = await getJSON(`${API_URL}?search=${query}`);
+
+    state.search.results = data.data.recipes.map(rec => {
+      return {
+        id: rec.id,
+        title: rec.title,
+        publisher: rec.publisher,
+        image: rec.image_url,
+      };
+    });
+  } catch (error) {
+    console.log(`${error}`);
+    throw error;
+  }
+};
+
+loadSearchResults('pizza');
