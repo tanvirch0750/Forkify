@@ -1,0 +1,26 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _View = require('./View');
+var _ViewDefault = _parcelHelpers.interopDefault(_View);
+require('url:../../img/icons.svg');
+class PaginationView extends _ViewDefault.default {
+  _parentElement = document.querySelector('.pagination');
+  _generateMarkup() {
+    const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
+    console.log(numPages);
+    // Page 1 and there are other pages
+    if (this._data.currentPage === 1 && numPages > 1) {
+      return 'Page 1 and others';
+    }
+    // Page 1 and there are NO other pages
+    // Last page
+    if (this._data.currentPage === numPages) {
+      return 'last page';
+    }
+    // Other page
+    if (this._data.currentPage < numPages) {
+      return 'other page';
+    }
+  }
+}
+exports.default = new PaginationView();

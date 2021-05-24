@@ -1,0 +1,46 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _View = require('./View');
+var _ViewDefault = _parcelHelpers.interopDefault(_View);
+var _urlImgIconsSvg = require('url:../../img/icons.svg');
+var _urlImgIconsSvgDefault = _parcelHelpers.interopDefault(_urlImgIconsSvg);
+class PaginationView extends _ViewDefault.default {
+  _parentElement = document.querySelector('.pagination');
+  _generateMarkup() {
+    const curPage = this._data.currentPage;
+    const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
+    // Page 1 and there are other pages
+    if (curPage === 1 && numPages > 1) {
+      return this._generateMarkupButton(curPage, 'next', 'right');
+    }
+    // Last page
+    if (curPage === numPages && numPages > 1) {
+      return this._generateMarkupButton(curPage, 'prev', 'left');
+    }
+    // Other page
+    if (curPage < numPages) {
+      const data = [[curPage, 'prev', 'left'], [curPage, 'next', 'right']];
+      data.forEach(function (entry) {
+        return 'hello';
+      });
+    }
+    // Page 1 and there are NO other pages
+    return '';
+  }
+  _generateMarkupButton(page, btnClass, arrowClass) {
+    const calcPage = btnClass === 'next' ? page + 1 : page - 1;
+    return `
+      <button class="btn--inline pagination__btn--${btnClass}">
+        ${arrowClass === 'left' ? `<svg class="search__icon">
+          <use href="${_urlImgIconsSvgDefault.default}#icon-arrow-${arrowClass}"></use>
+        </svg>
+        <span>Page ${calcPage}</span>` : ` <span>Page ${calcPage}</span>
+        <svg class="search__icon">
+          <use href="${_urlImgIconsSvgDefault.default}#icon-arrow-${arrowClass}"></use>
+        </svg>`}
+       
+      </button>
+    `;
+  }
+}
+exports.default = new PaginationView();
