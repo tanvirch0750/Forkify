@@ -1,7 +1,9 @@
 import { API_URL, RES_PER_PAGE } from './config';
 import { getJSON } from './helper';
 
-// Application state (STATE)
+/**==========================================
+ * *********** APPLICATION STATE ************
+ ===========================================*/
 export const state = {
   recipes: {},
   search: {
@@ -12,6 +14,9 @@ export const state = {
   },
 };
 
+/**==========================================
+ * ******** LOAD SINGLE RECIPE DATA *********
+ ===========================================*/
 // Bring recipe data by ajax call (HTTP LIBRARY)
 export const loadRecipe = async function (id) {
   try {
@@ -34,6 +39,9 @@ export const loadRecipe = async function (id) {
   }
 };
 
+/**==========================================
+ * ********** LOAD ALL RECIPIES ***********
+ ===========================================*/
 // Bring search data by ajax call (HTTP LIBRARY)
 export const loadSearchResults = async function (query) {
   try {
@@ -54,7 +62,9 @@ export const loadSearchResults = async function (query) {
   }
 };
 
-// Pagination functionality
+/**==========================================
+ * ********** PAGINATION ***********
+ ===========================================*/
 export const getSearchResultsPage = function (page = state.search.currentPage) {
   state.search.currentPage = page;
 
@@ -62,4 +72,16 @@ export const getSearchResultsPage = function (page = state.search.currentPage) {
   const end = page * state.search.resultsPerPage; // 10
 
   return state.search.results.slice(start, end);
+};
+
+/**==========================================
+ * ********** UPDATE SERVINGS ***********
+ ===========================================*/
+export const updateServings = function (newServings) {
+  state.recipes.ingredients.forEach(ing => {
+    // newQt = oldQt * newServings / oldServings // 2 * 8 / 4 = 4
+    ing.quantity = (ing.quantity * newServings) / state.recipes.servings;
+  });
+
+  state.recipes.servings = newServings;
 };

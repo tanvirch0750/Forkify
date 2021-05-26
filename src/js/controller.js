@@ -14,6 +14,9 @@ import 'regenerator-runtime/runtime';
 //   module.hot.accept();
 // }
 
+/**==========================================
+ * ********** RECIPES CONTROLLER ***********
+ ===========================================*/
 const controlRecipes = async () => {
   try {
     const id = window.location.hash.slice(1);
@@ -32,6 +35,9 @@ const controlRecipes = async () => {
   }
 };
 
+/**==========================================
+ * ********** SEARCH CONTROLLER ***********
+ ===========================================*/
 const controlSearchResults = async function () {
   try {
     resultsView.renderSpinner();
@@ -50,6 +56,9 @@ const controlSearchResults = async function () {
   } catch (error) {}
 };
 
+/**==========================================
+ * ********** PAGINATION CONTROLLER ********
+ ===========================================*/
 const controlPagination = function (goToPage) {
   // render NEW search results
   resultsView.render(model.getSearchResultsPage(goToPage));
@@ -58,11 +67,25 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
+/**==========================================
+ * ********** SERVINGS CONTROLLER ***********
+ ===========================================*/
+const controlServings = function (newServings) {
+  // update the recipe servings (in state)
+  model.updateServings(newServings);
+
+  // update the recipe view
+  recipeView.render(model.state.recipes);
+};
+
+/**==========================================
+ * ********* INITIAL FUNCTIONALITY *********
+ ===========================================*/
 // for publisher-subscriber pattern
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
+  recipeView.addHandlerUpdateServings(controlServings);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
 };
-
 init();

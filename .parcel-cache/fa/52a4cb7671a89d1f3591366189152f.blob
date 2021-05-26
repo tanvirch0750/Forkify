@@ -1,0 +1,80 @@
+var _model = require('./model');
+var _viewsRecipeView = require('./views/recipeView');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _viewsRecipeViewDefault = _parcelHelpers.interopDefault(_viewsRecipeView);
+var _viewsSearchView = require('./views/searchView');
+var _viewsSearchViewDefault = _parcelHelpers.interopDefault(_viewsSearchView);
+var _viewsResultsView = require('./views/resultsView');
+var _viewsResultsViewDefault = _parcelHelpers.interopDefault(_viewsResultsView);
+var _viewsPaginationView = require('./views/paginationView');
+var _viewsPaginationViewDefault = _parcelHelpers.interopDefault(_viewsPaginationView);
+require('core-js/stable');
+require('regenerator-runtime/runtime');
+// https://forkify-api.herokuapp.com/v2
+// parcel- reloading
+// if (module.hot) {
+// module.hot.accept();
+// }
+/**==========================================
+* ********** RECIPES CONTROLLER ***********
+===========================================*/
+const controlRecipes = async () => {
+  try {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    _viewsRecipeViewDefault.default.renderSpinner();
+    // 1) Loading Recipe
+    await _model.loadRecipe(id);
+    // 2) Rendering Recipe
+    _viewsRecipeViewDefault.default.render(_model.state.recipes);
+    // test
+    controlServings();
+  } catch (error) {
+    _viewsRecipeViewDefault.default.renderError();
+  }
+};
+/**==========================================
+* ********** SEARCH CONTROLLER ***********
+===========================================*/
+const controlSearchResults = async function () {
+  try {
+    _viewsResultsViewDefault.default.renderSpinner();
+    // get search query
+    const query = _viewsSearchViewDefault.default.getQuery();
+    if (!query) return;
+    // load search results
+    await _model.loadSearchResults(query);
+    // render search results
+    _viewsResultsViewDefault.default.render(_model.getSearchResultsPage(1));
+    // render the initial pagination buttons
+    _viewsPaginationViewDefault.default.render(_model.state.search);
+  } catch (error) {}
+};
+/**==========================================
+* ********** PAGINATION CONTROLLER ********
+===========================================*/
+const controlPagination = function (goToPage) {
+  // render NEW search results
+  _viewsResultsViewDefault.default.render(_model.getSearchResultsPage(goToPage));
+  // render NEW pagination buttons
+  _viewsPaginationViewDefault.default.render(_model.state.search);
+};
+/**==========================================
+* ********** SERVINGS CONTROLLER ***********
+===========================================*/
+const controlServings = function () {
+  // update the recipe servings (in state)
+  _model.updateServings(8);
+  // update the recipe view
+  _viewsRecipeViewDefault.default.render(_model.state.recipes);
+};
+/**==========================================
+* ********* INITIAL FUNCTIONALITY *********
+===========================================*/
+// for publisher-subscriber pattern
+const init = function () {
+  _viewsRecipeViewDefault.default.addHandlerRender(controlRecipes);
+  _viewsSearchViewDefault.default.addHandlerSearch(controlSearchResults);
+  _viewsPaginationViewDefault.default.addHandlerClick(controlPagination);
+};
+init();
