@@ -28,7 +28,7 @@
 114C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-reduce-initial\node_modules\color-name132648575773747372 1
 141C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\stylehacks\node_modules\postcss-selector-parser\dist\selectors\comment.js121436361000000000 0
 90C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\create-hash\browser.js121436361000000000 0
-59C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist132663602203123608 1
+59C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist132665170709656207 1
 96C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\highlight.js\styles\nnfx.css121436361000000000 0
 128C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-modules\node_modules\postcss-modules-scope\README.md121436361000000000 0
 115C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-svgo\node_modules\postcss\lib\vendor.js121436361000000000 0
@@ -56,7 +56,7 @@
 129C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-minify-selectors\node_modules\color-name\package.json132648575823608230 0
 118C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\stylehacks\node_modules\postcss\lib\declaration.js121436361000000000 0
 111C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\core-js\modules\es.reflect.to-string-tag.js121436361000000000 0
-75C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src\js\controller.js132663601247742870 0
+75C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src\js\controller.js132665169508391701 0
 58C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src132648555826468800 1
 84C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\core-js\features132655437471631938 1
 125C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-modules-values\node_modules\color-convert\LICENSE121436361000000000 0
@@ -132,7 +132,7 @@
 114C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\jsdom\lib\jsdom\living\nodes\ChildNode-impl.js121436361000000000 0
 114C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-minify-gradients\node_modules\has-flag132648575841550979 1
 105C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\csso\lib\restructure\prepare\index.js121436361000000000 0
-61C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src\js132657372339868172 1
+61C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src\js132664960578652124 1
 77C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\tweetnacl132648575587805535 1
 122C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-svgo\node_modules\postcss-value-parser\LICENSE121436361000000000 0
 73C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src\sass\main.scss132482863140000000 0
@@ -250,7 +250,7 @@
 105C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\domain-browser\.dependabot\config.yml121436361000000000 0
 100C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\core-js\es\symbol\unscopables.js121436361000000000 0
 96C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\resolve\test\node_path\x\aaa132648574688636275 1
-70C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src\js\model.js132663246211336235 0
+70C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src\js\model.js132665149120709273 0
 100C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\resolve\test\module_dir\xmodules132648574637164019 1
 115C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\icss-utils\node_modules\color-name\package.json132648575993888356 0
 158C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\@parcel\transformer-posthtml\node_modules\posthtml-parser\coverage\lcov-report\favicon.png121436361000000000 0
@@ -260,7 +260,7 @@
 117C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\jsdom\lib\jsdom\living\named-properties-window.js121436361000000000 0
 122C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-discard-overridden\node_modules\chalk\index.js121436361000000000 0
 104C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\@parcel\core\test\fixtures\bundle.js121436361000000000 0
-81C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src\js\views\recipeView.js132660954658731316 0
+81C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\src\js\views\recipeView.js132665170699005988 0
 106C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\core-js\features\string\code-points.js121436361000000000 0
 112C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\uncss\node_modules\supports-color\browser.js121436361000000000 0
 96C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\commander\typings\index.d.ts121436361000000000 0
@@ -4268,7 +4268,7 @@
 107C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\uncss\node_modules\color-name\README.md131339336430000000 0
 84C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\domutils\LICENSE131380691250000000 0
 112C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\core-js\features\string\virtual\ends-with.js121436361000000000 0
-77C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.250b04c7.js132663602203073576 0
+77C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.250b04c7.js132665170709576125 0
 130C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-modules-scope\node_modules\postcss\docs\source-maps.md121436361000000000 0
 111C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\purgecss\node_modules\color-convert\LICENSE121436361000000000 0
 93C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\svgo\plugins\prefixIds.js121436361000000000 0
@@ -8463,7 +8463,7 @@
 111C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\caniuse-lite\data\features\ambient-light.js121436361000000000 0
 135C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-normalize-url\node_modules\postcss-value-parser\lib\walk.js121436361000000000 0
 115C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-normalize-url\node_modules\postcss\docs132648574351227809 1
-78C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.1206e35b.css132663602202833361 0
+78C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.1206e35b.css132665170709476029 0
 153C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-merge-rules\node_modules\postcss-selector-parser\postcss-selector-parser.d.ts121436361000000000 0
 110C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\is-descriptor\node_modules\kind-of\LICENSE131523517230000000 0
 97C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-normalize-string\dist132648574195251873 1
@@ -8946,7 +8946,7 @@
 93C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\@babel\plugin-syntax-flow132648575484313249 1
 100C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\es-abstract\2016\ObjectCreate.js121436361000000000 0
 140C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-normalize-repeat-style\node_modules\postcss\lib\map-generator.js121436361000000000 0
-78C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\icons.c4b52749.svg132663602198807625 0
+78C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\icons.c4b52749.svg132665170705592317 0
 131C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-normalize-repeat-style\node_modules\postcss\lib\node.js121436361000000000 0
 136C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-normalize-repeat-style\node_modules\postcss\lib\postcss.d.ts121436361000000000 0
 120C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-merge-rules\node_modules\ansi-styles\license131408182550000000 0
@@ -9437,7 +9437,7 @@
 124C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-modules-values\node_modules\postcss\CHANGELOG.md121436361000000000 0
 127C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-modules-values\node_modules\postcss\CONTRIBUTING.md121436361000000000 0
 112C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\csso\node_modules\mdn-data\css\syntaxes.json121436361000000000 0
-77C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\logo.5d271741.png132663602198877697 0
+77C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\logo.5d271741.png132665170705643128 0
 124C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-modules-values\node_modules\postcss\package.json132648575676340426 0
 110C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\core-js\features\array\virtual\flat-map.js121436361000000000 0
 126C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\postcss-modules-values\node_modules\postcss\lib\at-rule.js121436361000000000 0
@@ -20663,7 +20663,7 @@
 126C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\@babel\helper-skip-transparent-expression-wrappers\LICENSE121012626000000000 0
 131C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\@babel\helper-skip-transparent-expression-wrappers\package.json132648575625398623 0
 128C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\@babel\helper-skip-transparent-expression-wrappers\README.md121012626000000000 0
-78C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\icons.d4a14980.svg132663602198997822 0
+78C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\icons.d4a14980.svg132665170705992685 0
 100C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\@babel\helper-replace-supers\lib132648574136147622 1
 104C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\@babel\helper-replace-supers\LICENSE121012626000000000 0
 109C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\@babel\helper-replace-supers\package.json132648575617597120 0
@@ -20934,7 +20934,7 @@
 81C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\.bin\uuid.ps1132648576182580355 0
 78C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\.bin\which132648576183393882 0
 82C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\node_modules\.bin\which.ps1132648576183388890 0
-80C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\favicon.80934ffe.png132663602198987797 0
-82C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.1206e35b.css.map132663602202963455 0
-81C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.250b04c7.js.map132663602203113757 0
-70C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.html132663602202823341 0
+80C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\favicon.80934ffe.png132665170705622335 0
+82C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.1206e35b.css.map132665170709566116 0
+81C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.250b04c7.js.map132665170709656207 0
+70C:\Users\CHOWDHURY\Desktop\tanvir\github repos\Forkify\dist\index.html132665170709355914 0
