@@ -4,6 +4,8 @@ export default class View {
   _data;
 
   render(data, render = true) {
+    // 218f5bcdc3e6cc605e0e838bbee6c5.v8
+
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
 

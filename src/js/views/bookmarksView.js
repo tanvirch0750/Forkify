@@ -6,6 +6,11 @@ class BookmarksView extends View {
   _errorMessage = 'No bookmark yet. Find a fine recipe and bookmark it';
   _message = '';
 
+  // load immediatly (this is something do with localstorage bookmark error problem)
+  addHandlerRender(handler) {
+    window.addEventListener('load', handler);
+  }
+
   _generateMarkup() {
     return this._data
       .map(bookmark => PreviewView.render(bookmark, false))

@@ -99,11 +99,19 @@ const controlAddBookmark = function () {
   bookmarksView.render(model.state.bookmarks);
 };
 
+// load immediatly (this is something do with localstorage bookmark error problem)
+const controlBookmarks = function () {
+  bookmarksView.render(model.state.bookmarks);
+};
+
 /**==========================================
  * ********* INITIAL FUNCTIONALITY *********
  ===========================================*/
 // for publisher-subscriber pattern
 const init = function () {
+  // load immediatly (this is something do with localstorage bookmark error problem)
+  bookmarksView.addHandlerRender(controlBookmarks);
+  //////////
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
