@@ -3,6 +3,7 @@ import recipeView from './views/recipeView';
 import searchView from './views/searchView';
 import resultsView from './views/resultsView';
 import paginationView from './views/paginationView';
+import bookmarksView from './views/bookmarksView';
 // polyfill
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
@@ -27,6 +28,7 @@ const controlRecipes = async () => {
 
     // 0) Update results view to mark selected search results
     resultsView.update(model.getSearchResultsPage());
+    bookmarksView.update(model.state.bookmarks);
 
     // 1) Loading Recipe
     await model.loadRecipe(id);
@@ -83,12 +85,28 @@ const controlServings = function (newServings) {
 };
 
 /**==========================================
+ * ********** BOOKMARK CONTROLLER ***********
+ ===========================================*/
+const controlAddBookmark = function () {
+  // 1) Add or rebove bookmark
+  if (!model.state.recipes.bookmarked) model.addBookMark(model.state.recipes);
+  else model.deleteBookMark(model.state.recipes.id);
+
+  // Update recipe view
+  recipeView.update(model.state.recipes);
+
+  // render bookmarks
+  bookmarksView.render(model.state.bookmarks);
+};
+
+/**==========================================
  * ********* INITIAL FUNCTIONALITY *********
  ===========================================*/
 // for publisher-subscriber pattern
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
+  recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
 };
