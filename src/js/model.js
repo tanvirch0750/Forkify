@@ -1,5 +1,5 @@
-import { API_URL, RES_PER_PAGE } from './config';
-import { getJSON } from './helper';
+import { API_URL, RES_PER_PAGE, KEY } from './config';
+import { getJSON, sendJSON } from './helper';
 
 /**==========================================
  * *********** APPLICATION STATE ************
@@ -18,23 +18,28 @@ export const state = {
 /**==========================================
  * ******** LOAD SINGLE RECIPE DATA *********
  ===========================================*/
+
+const createRecipeObject = function (data) {
+  const { recipe } = data.data;
+  return {
+    id: recipe.id,
+    title: recipe.title,
+    publisher: recipe.publisher,
+    sourceUrl: recipe.source_url,
+    image: recipe.image_url,
+    servings: recipe.servings,
+    cookingTime: recipe.cooking_time,
+    ingredients: recipe.ingredients,
+    // conditionally add properties to an object
+    ...(recipe.key && { key: recipe.key }),
+  };
+};
 // Bring recipe data by ajax call (HTTP LIBRARY)
 export const loadRecipe = async function (id) {
   try {
     const data = await getJSON(`${API_URL}${id}`);
 
-    const { recipe } = data.data;
-
-    state.recipes = {
-      id: recipe.id,
-      title: recipe.title,
-      publisher: recipe.publisher,
-      sourceUrl: recipe.source_url,
-      image: recipe.image_url,
-      servings: recipe.servings,
-      cookingTime: recipe.cooking_time,
-      ingredients: recipe.ingredients,
-    };
+    state.recipes = createRecipeObject(data);
 
     // for bookmark
     if (state.bookmarks.some(bookmark => bookmark.id === id)) {
@@ -98,7 +103,7 @@ export const updateServings = function (newServings) {
 };
 
 /**==========================================
- * ********** BOOKMARKS ***********
+ * *************** BOOKMARKS ****************
  ===========================================*/
 const persistBookmarks = function () {
   localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
@@ -134,4 +139,45 @@ init();
 // for development purpose
 const clearBookmarks = function () {
   localStorage.clear('bookmarks');
+};
+
+/**==========================================
+ * ************* UPLOAD RECIPE **************
+ ===========================================*/
+export const uploadRecipe = async function (newRecipe) {
+  try {
+    const ingredients = Object.entries(newRecipe)
+      .filter(entry => entry[0].startsWith('ingredient') && entry[1] !== '')
+      .map(ing => {
+        const ingArr = ing[1].replaceAll(' ', '').split(',');
+
+        if (ingArr.length !== 3)
+          throw new Error(
+            'Wrong ingredient format! Please use the correct ingredient format'
+          );
+
+        const [quantity, unit, description] = ingArr;
+        return { quantity: quantity ? +quantity : null, unit, description };
+      });
+
+    const recipe = {
+      title: newRecipe.title,
+      source_url: newRecipe.sourceUrl,
+      image_url: newRecipe.image,
+      publisher: newRecipe.publisher,
+      cooking_time: +newRecipe.cookingTime,
+      servings: +newRecipe.servings,
+      ingredients,
+    };
+
+    const data = await sendJSON(`${API_URL}?key=${KEY}`, recipe);
+
+    state.recipes = createRecipeObject(data);
+
+    addBookMark(state.recipes);
+
+    console.log(data);
+  } catch (error) {
+    throw error;
+  }
 };
