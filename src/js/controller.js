@@ -4,6 +4,7 @@ import searchView from './views/searchView';
 import resultsView from './views/resultsView';
 import paginationView from './views/paginationView';
 import bookmarksView from './views/bookmarksView';
+import addRecipeView from './views/addRecipeView';
 // polyfill
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
@@ -28,6 +29,8 @@ const controlRecipes = async () => {
 
     // 0) Update results view to mark selected search results
     resultsView.update(model.getSearchResultsPage());
+
+    // update the bookmarks view
     bookmarksView.update(model.state.bookmarks);
 
     // 1) Loading Recipe
@@ -105,6 +108,13 @@ const controlBookmarks = function () {
 };
 
 /**==========================================
+ * ******** ADD RECIPE CONTROLLER ***********
+ ===========================================*/
+const controlAddRecipe = function (newRecipe) {
+  console.log(newRecipe);
+};
+
+/**==========================================
  * ********* INITIAL FUNCTIONALITY *********
  ===========================================*/
 // for publisher-subscriber pattern
@@ -117,5 +127,6 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
+  addRecipeView.addHandlerUpload(controlAddRecipe);
 };
 init();
